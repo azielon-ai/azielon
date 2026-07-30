@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootcamp & Pricing — Azielon </title>
+  <meta name="description" content="Explore Azielon  pricing plans, comparison table, and frequently asked questions.">
+  <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
+  <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+  <link href="[https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap](https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap)" rel="stylesheet">
+  <link rel="stylesheet" href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css)">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-bottom: 6rem;
+    }
+    .pricing-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 3rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+    .pricing-card.popular {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-lg);
+      transform: scale(1.03);
+    }
+    .pricing-card h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .pricing-price {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 1.5rem 0;
+    }
+    .pricing-features {
+      margin-bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .pricing-features li {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    .pricing-features li i {
+      color: var(--secondary);
+    }
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 6rem;
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+    }
+    .comparison-table th, .comparison-table td {
+      padding: 1rem 1.5rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border-color);
+      font-size: 0.95rem;
+    }
+    .comparison-table th {
+      background: var(--bg-surface);
+      font-weight: 600;
+    }
+    .comparison-table td:not(:first-child), .comparison-table th:not(:first-child) {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="glass-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">Azielon<span></span></a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="curriculum.html">Curriculum</a>
+        <a href="bootcamp.html" class="active">Bootcamp</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+        <a href="bootcamp.html" class="btn btn-primary">Enroll Now</a>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav-drawer" id="mobile-drawer">
+    <div class="mobile-nav-header">
+      <a href="index.html" class="logo">Azielon<span></span></a>
+      <button class="mobile-menu-btn" id="close-menu-btn" aria-label="Close menu"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="curriculum.html">Curriculum</a>
+      <a href="bootcamp.html">Bootcamp</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="bootcamp.html" class="btn btn-primary">Enroll Now</a>
+  </div>
+
+  <main style="padding-top: 140px;">
+    <section class="container" style="padding-bottom: 8rem;">
+      <div class="section-header scroll-reveal">
+        <span class="badge">Pricing Plans</span>
+        <h1>Choose Your Pathway</h1>
+        <p>Flexible enrollment options for our high school AI programs and bootcamps.</p>
+      </div>
+
+      <div class="pricing-grid scroll-reveal">
+        <div class="pricing-card">
+          <div>
+            <h3>Starter</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Ideal for self-paced learners getting started with AI basics.</p>
+            <div class="pricing-price">$499</div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check"></i> AI Foundations Course</li>
+              <li><i class="fas fa-check"></i> Python Basics Module</li>
+              <li><i class="fas fa-check"></i> Community Discord Access</li>
+              <li><i class="fas fa-times" style="color: var(--text-muted);"></i> Live 1on1 Mentorship</li>
+            </ul>
+          </div>
+          <a href="contact.html" class="btn btn-secondary" style="width: 100%;">Enroll Starter</a>
+        </div>
+
+        <div class="pricing-card popular">
+          <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--primary); color: #fff; padding: 0.25rem 1rem; border-radius: var(--radius-full); font-size: 0.75rem; font-weight: 700; text-transform: uppercase;">Most Popular</div>
+          <div>
+            <h3>Professional</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Our flagship 10-Day AI Bootcamp with live expert guidance.</p>
+            <div class="pricing-price">$1,299</div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check"></i> Full 10-Day AI Bootcamp</li>
+              <li><i class="fas fa-check"></i> 10+ Real AI Portfolio Projects</li>
+              <li><i class="fas fa-check"></i> Small Class Size (8:1 Ratio)</li>
+              <li><i class="fas fa-check"></i> Live Expert Mentorship</li>
+              <li><i class="fas fa-check"></i> Demo Day Presentation</li>
+            </ul>
+          </div>
+          <a href="contact.html" class="btn btn-primary" style="width: 100%;">Enroll Professional</a>
+        </div>
+
+        <div class="pricing-card">
+          <div>
+            <h3>Premium</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Ultimate immersion with dedicated 1-on-1 coaching.</p>
+            <div class="pricing-price">$2,499</div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check"></i> Everything in Professional</li>
+              <li><i class="fas fa-check"></i> Dedicated 1-on-1 AI Mentor</li>
+              <li><i class="fas fa-check"></i> College Application AI Guidance</li>
+              <li><i class="fas fa-check"></i> Lifetime Access to Curriculum</li>
+            </ul>
+          </div>
+          <a href="contact.html" class="btn btn-secondary" style="width: 100%;">Enroll Premium</a>
+        </div>
+      </div>
+
+      <div class="scroll-reveal" style="margin-bottom: 6rem;">
+        <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem;">Feature Comparison</h2>
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Starter</th>
+              <th>Professional</th>
+              <th>Premium</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Course Access</td>
+              <td>Foundations</td>
+              <td>Full Curriculum</td>
+              <td>Full Curriculum + Lifetime</td>
+            </tr>
+            <tr>
+              <td>Live Classes</td>
+              <td><i class="fas fa-times" style="color: var(--text-muted);"></i></td>
+              <td><i class="fas fa-check" style="color: var(--primary);"></i></td>
+              <td><i class="fas fa-check" style="color: var(--primary);"></i></td>
+            </tr>
+            <tr>
+              <td>Portfolio Projects</td>
+              <td>3 Projects</td>
+              <td>10+ Projects</td>
+              <td>15+ Custom Projects</td>
+            </tr>
+            <tr>
+              <td>1-on-1 Mentorship</td>
+              <td><i class="fas fa-times" style="color: var(--text-muted);"></i></td>
+              <td>Group Mentorship</td>
+              <td>Dedicated 1-on-1</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="scroll-reveal" style="max-width: 800px; margin: 0 auto;">
+        <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem;">Frequently Asked Questions</h2>
+        <div class="accordion-item active" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); margin-bottom: 1rem;">
+          <button class="accordion-header" style="padding: 1.5rem; background: none; border: none; width: 100%; text-align: left; font-weight: 600; cursor: pointer;">
+            <span>Are there any prerequisites for high school students?</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content" style="padding: 0 1.5rem 1.5rem 1.5rem; color: var(--text-muted);">
+            <p>No prior coding experience is required for our Starter and Professional tracks. A passion for technology and basic algebra proficiency are all you need!</p>
+          </div>
+        </div>
+        <div class="accordion-item" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); margin-bottom: 1rem;">
+          <button class="accordion-header" style="padding: 1.5rem; background: none; border: none; width: 100%; text-align: left; font-weight: 600; cursor: pointer;">
+            <span>How are classes conducted?</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content" style="padding: 0 1.5rem 1.5rem 1.5rem; color: var(--text-muted);">
+            <p>Classes are held live online via interactive video sessions with breakout rooms and active mentor supervision to ensure maximum engagement.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="color: #fff; margin-bottom: 1rem; display:inline-block;">Azielon<span></span></a>
+          <p>Empowering high school students to master artificial intelligence.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="curriculum.html">Curriculum</a></li>
+            <li><a href="bootcamp.html">Bootcamp</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Programs</h4>
+          <ul class="footer-links">
+            <li><a href="curriculum.html">AI Foundations</a></li>
+            <li><a href="curriculum.html">Machine Learning</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p>admissions@azielon.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Azielon . All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script>
+    document.querySelectorAll('.accordion-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.parentElement;
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>

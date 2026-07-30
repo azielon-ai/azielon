@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curriculum — Azielon </title>
+  <meta name="description" content="Explore Azielon 's detailed AI curriculum, timeline, and accordion syllabus.">
+  <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
+  <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+  <link href="[https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap](https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap)" rel="stylesheet">
+  <link rel="stylesheet" href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css)">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    .accordion-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      margin-bottom: 1rem;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .accordion-header {
+      padding: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1.15rem;
+      background: var(--bg-card);
+      color: var(--text-main);
+      border: none;
+      width: 100%;
+      text-align: left;
+    }
+    .accordion-content {
+      padding: 0 1.5rem 1.5rem 1.5rem;
+      color: var(--text-muted);
+      display: none;
+    }
+    .accordion-item.active .accordion-content {
+      display: block;
+    }
+    .accordion-header i {
+      transition: transform 0.3s ease;
+    }
+    .accordion-item.active .accordion-header i {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="glass-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">Azielon<span></span></a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="curriculum.html" class="active">Curriculum</a>
+        <a href="bootcamp.html">Bootcamp</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+        <a href="bootcamp.html" class="btn btn-primary">Enroll Now</a>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav-drawer" id="mobile-drawer">
+    <div class="mobile-nav-header">
+      <a href="index.html" class="logo">Azielon<span></span></a>
+      <button class="mobile-menu-btn" id="close-menu-btn" aria-label="Close menu"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="curriculum.html">Curriculum</a>
+      <a href="bootcamp.html">Bootcamp</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="bootcamp.html" class="btn btn-primary">Enroll Now</a>
+  </div>
+
+  <main style="padding-top: 140px;">
+    <section class="container" style="padding-bottom: 8rem;">
+      <div class="section-header scroll-reveal">
+        <span class="badge">Syllabus</span>
+        <h1>Comprehensive AI Curriculum</h1>
+        <p>A rigorous, structured pathway from foundational coding to advanced generative AI agents.</p>
+        <div style="margin-top: 2rem;">
+          <a href="#" class="btn btn-primary" onclick="alert('Downloading complete syllabus PDF...'); return false;"><i class="fas fa-download"></i> Download Full Syllabus PDF</a>
+        </div>
+      </div>
+
+      <div style="max-width: 800px; margin: 0 auto;" class="scroll-reveal">
+        <div class="accordion-item active">
+          <button class="accordion-header">
+            <span>Module 1: Foundations of Python & Data Science</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <p>Master Python fundamentals including variables, control flow, functions, object-oriented programming, and essential data libraries (Pandas and NumPy) required for handling machine learning datasets.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>Module 2: Prompt Engineering & LLM Integration</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <p>Explore large language models, system prompts, few-shot prompting, temperature parameters, and integrating OpenAI and Anthropic APIs into web applications.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>Module 3: Supervised & Unsupervised Machine Learning</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <p>Understand linear regression, decision trees, clustering algorithms, and model evaluation metrics using scikit-learn.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>Module 4: Computer Vision & Neural Networks</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <p>Build convolutional neural networks (CNNs), process image data using OpenCV, and train custom classification models.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>Module 5: AI Agents & Capstone Project</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <p>Construct autonomous multi-agent workflows, deploy web applications via Streamlit/Vercel, and present capstone projects on Demo Day.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="color: #fff; margin-bottom: 1rem; display:inline-block;">Azielon<span></span></a>
+          <p>Empowering high school students to master artificial intelligence.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="curriculum.html">Curriculum</a></li>
+            <li><a href="bootcamp.html">Bootcamp</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Programs</h4>
+          <ul class="footer-links">
+            <li><a href="curriculum.html">AI Foundations</a></li>
+            <li><a href="curriculum.html">Machine Learning</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p>admissions@azielon.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Azielon . All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script>
+    document.querySelectorAll('.accordion-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.parentElement;
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>
